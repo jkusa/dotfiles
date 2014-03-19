@@ -1,0 +1,6 @@
+Bundle 'javacomplete'
+Bundle 'mileszs/ack.vim'
+Bundle 'xolox/vim-easytags'
+Bundle 'xolox/vim-misc'
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
