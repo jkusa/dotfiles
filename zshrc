@@ -59,12 +59,17 @@ bindkey -M vicmd 'j' history-substring-search-down
 bindkey -M viins '^a'    beginning-of-line
 bindkey -M viins '^e'    end-of-line
 
-#Exports 
+#Exports
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/X11/bin:$HOME/dev/lib/play-2.2.0:$PATH
 export LC_ALL=en_US.utf-8 
 export LANG="$LC_ALL"
 export EDITOR=vim
+export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 
-#Aliases 
+#Aliases
 alias tmux="TERM=screen-256color-bce tmux"
 #alias bower='noglojb bower'
+
+
+#Allow more files to be open
+ulimit -S -n 4080
