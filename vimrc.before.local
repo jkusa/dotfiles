@@ -1,0 +1,2 @@
+let g:spf13_bundle_groups=['general', 'programming', 'php', 'ruby', 'python', 'twig', 'javascript', 'html', 'misc', 'scala', 'youcompleteme']
+""let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'go', 'twig', 'javascript', 'haskell', 'html', 'misc', 'scala', 'youcompleteme']
