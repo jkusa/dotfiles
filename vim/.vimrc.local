@@ -1,0 +1,33 @@
+"Configure Dash Plugin
+nmap <silent> <leader>r <Plug>DashSearch
+
+let NERDTreeQuitOnOpen=0
+
+"Prevents NERDTree from changing working dir
+let NERDTreeChDirMode=0
+
+"Prevents vim from changing working dir
+set noautochdir
+
+"Allows system clipboard to work with vim
+set clipboard=unnamed
+
+"Dash Plugin mapping
+:nmap <silent> <leader>d <Plug>DashSearch
+
+"Allows tern to do autocomplete
+let tern#is_show_argument_hints_enabled = 1
+
+"http://vimcasts.org/episodes/project-wide-find-and-replace/
+command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
+function! QuickfixFilenames()
+  " Building a hash ensures we get each buffer only once
+  let buffer_numbers = {}
+  for quickfix_item in getqflist()
+    let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
+  endfor
+  return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
+endfunction
+
+"Lets easytags execute without blocking
+let g:easytags_async = 1

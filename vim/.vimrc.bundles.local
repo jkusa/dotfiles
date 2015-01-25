@@ -1,0 +1,9 @@
+Bundle 'javacomplete'
+Bundle 'xolox/vim-easytags'
+Bundle 'xolox/vim-misc'
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
+Bundle "marijnh/tern_for_vim"
+Bundle 'malkomalko/projections.vim'
+Bundle 'editorconfig/editorconfig-vim'
+Bundle 'PreserveNoEOL'
