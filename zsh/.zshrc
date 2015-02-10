@@ -67,10 +67,12 @@ export EDITOR=vim
 export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 
 #Aliases
-alias tmux="TERM=screen-256color-bce tmux"
+alias tmux="TERM=screen-256color-bce tmux attach"
 
 #alias bower='noglojb bower'
 
-
 #Allow more files to be open
 ulimit -S -n 4080
+
+#Attach to tmux on start
+[[ -z "$TMUX" ]] && exec tmux -2 attach
