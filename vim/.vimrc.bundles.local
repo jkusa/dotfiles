@@ -7,3 +7,4 @@ Bundle "marijnh/tern_for_vim"
 Bundle 'malkomalko/projections.vim'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'PreserveNoEOL'
+Bundle 'tpope/vim-dispatch'
