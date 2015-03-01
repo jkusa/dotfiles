@@ -74,5 +74,7 @@ alias tmux="TERM=screen-256color-bce tmux attach"
 #Allow more files to be open
 ulimit -S -n 4080
 
+export TERM='screen-256color'
+
 #Attach to tmux on start
 [[ -z "$TMUX" ]] && exec tmux -2 attach
