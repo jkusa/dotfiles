@@ -68,6 +68,7 @@ export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 
 #Aliases
 alias tmux="TERM=screen-256color-bce tmux attach"
+alias t='[[ -z "$TMUX" ]] && exec tmux -2 attach'
 
 #alias bower='noglojb bower'
 
@@ -76,5 +77,3 @@ ulimit -S -n 4080
 
 export TERM='screen-256color'
 
-#Attach to tmux on start
-[[ -z "$TMUX" ]] && exec tmux -2 attach
