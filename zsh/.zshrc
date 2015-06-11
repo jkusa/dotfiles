@@ -70,10 +70,15 @@ export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 alias tmux="TERM=screen-256color-bce tmux attach"
 alias t='[[ -z "$TMUX" ]] && exec tmux -2 attach'
 
-#alias bower='noglojb bower'
-
 #Allow more files to be open
 ulimit -S -n 4080
 
 export TERM='screen-256color'
+
+#Node Config
+export NVM_DIR="~/.nvm"
+[ -s "$NVM_DIR/nvm.sh"  ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+#Java Config
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
