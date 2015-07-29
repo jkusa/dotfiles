@@ -45,3 +45,6 @@ nnoremap <C-F>o :CtrlSFOpen<CR>
 " silent: Don't prompt for enter after execution
 :vnoremap <leader>v :w<Home>silent <End> !say <CR>
 
+"Set colors
+:set background=dark
+colo seoul256
