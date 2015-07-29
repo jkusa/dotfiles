@@ -1,0 +1,16 @@
+#General
+set line-graphics = utf-8
+
+#Main View
+set main-view-id-display = yes
+set main-view-date-display = relative
+
+#Bindings
+bind main B !git rebase -i %(commit)
+bind main ! !git revert %(commit)
+bind generic + !git commit --amend
+bind stash D !?git stash drop %(stash)
+bind stash A !?git stash apply %(stash)
+bind status S !?git stash save --keep-index %
+bind status P !git push origin
+bind generic B @sh -c "xdg-open 'https://'$(git remote -v | grep -Eo 'github.com[:/][^.]+' | head -1 | tr : /)'/commit/%(commit)'"
