@@ -48,3 +48,7 @@ nnoremap <C-F>o :CtrlSFOpen<CR>
 "Set colors
 :set background=dark
 colo seoul256
+
+"Highlight over 80 chars
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
