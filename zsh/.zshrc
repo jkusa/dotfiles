@@ -77,8 +77,8 @@ ulimit -S -n 4080
 export TERM='screen-256color'
 
 #Node Config
-export NVM_DIR="~/.nvm"
-[ -s "$NVM_DIR/nvm.sh"  ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 #Java Config
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
