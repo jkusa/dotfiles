@@ -39,3 +39,9 @@ vmap     <C-F>F <Plug>CtrlSFVwordExec
 nmap     <C-F>n <Plug>CtrlSFCwordPath
 nmap     <C-F>p <Plug>CtrlSFPwordPath
 nnoremap <C-F>o :CtrlSFOpen<CR>
+
+" Mac specific: Text-to-speech on selected text in visual mode
+" w: Don't replace selection with command output after execution
+" silent: Don't prompt for enter after execution
+:vnoremap <leader>v :w<Home>silent <End> !say <CR>
+
