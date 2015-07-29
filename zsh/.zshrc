@@ -69,6 +69,7 @@ export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 #Aliases
 alias tmux="TERM=screen-256color-bce tmux attach"
 alias t='[[ -z "$TMUX" ]] && exec tmux -2 attach'
+alias tg='tig --all'
 
 #Allow more files to be open
 ulimit -S -n 4080
