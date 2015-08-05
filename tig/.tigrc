@@ -2,8 +2,12 @@
 set line-graphics = utf-8
 
 #Main View
-set main-view-id-display = yes
-set main-view-date-display = relative
+set main-view = \
+        line-number:no,interval=5 \
+        id:yes \
+        date:relative \
+        author:full \
+        commit-title:yes,graph,refs,overflow=no
 
 #Bindings
 bind main B !git rebase -i %(commit)
