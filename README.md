@@ -43,3 +43,5 @@
  - tmux
     - [reattach-to-user-namespace](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard) - notes and workarounds for accessing the Mac OS X pasteboard in tmux sessions
 
+# other notes
+ - set zsh as default shell: `chsh -s /bin/zsh`
