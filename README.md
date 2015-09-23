@@ -37,11 +37,18 @@
  - zsh
     - [git](http://git-scm.com/) - distributed version control system (install via Homebrew; stock Mac version has issues)
     - [autojump](https://github.com/joelthelion/autojump) - a cd command that learns
+    - set zsh as default shell: `chsh -s /bin/zsh`
  - vim
     - [jshint](https://github.com/jshint/jshint) - a tool that helps to detect errors and potential problems in your JavaScript code
     - [ctags](http://ctags.sourceforge.net/) - generates an index (or tag) file of language objects found in source files that allows these items to be quickly and easily located by a text editor or other utility
  - tmux
     - [reattach-to-user-namespace](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard) - notes and workarounds for accessing the Mac OS X pasteboard in tmux sessions
 
-# other notes
- - set zsh as default shell: `chsh -s /bin/zsh`
+# langs
+ - node.js
+      - [nvm](https://github.com/creationix/nvm) - Node Version Manager (`brew install nvm`) 
+ - java
+      - [jvm](http://www.oracle.com/technetwork/java/javase/downloads/index.html) - a general-purpose computer programming language
+      - [intellij](https://www.jetbrains.com/idea/) - the most intelligent java ide (with vim plugin)
+
+ 
