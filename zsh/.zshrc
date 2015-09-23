@@ -75,8 +75,6 @@ alias tg='tig --all'
 #Allow more files to be open
 ulimit -S -n 4080
 
-export TERM='screen-256color'
-
 #Node Config
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
