@@ -9,6 +9,7 @@
 " }
 
 " General {
+    filetype plugin indent on
     set ttimeout
     set ttimeoutlen=0
     set history=1000                " Store a ton of history (default is 20)
@@ -69,7 +70,6 @@
       autocmd!
       autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
       autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-      autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
       autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
       autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
     augroup end

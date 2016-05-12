@@ -93,20 +93,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'reedes/vim-wordy'
 " }
 
-" deoplete {
-    function! DoRemote(arg)
-        UpdateRemotePlugins
-    endfunction
-    Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-    let g:deoplete#enable_at_startup = 1
-    autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-"}
-
 " Tern {
     Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
     let g:tern_show_argument_hints = 'on_hold'
     let g:tern_show_signature_in_pum = 1
-    autocmd FileType javascript setlocal omnifunc=tern#Complete
 " }
 
 " Language Support {
@@ -124,8 +114,18 @@ call plug#begin('~/.vim/plugged')
     let g:mustache_abbreviations = 1
 " }
 
-" Other {
+" Utilsnips {
     Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+    let g:UltiSnipsExpandTrigger = '<C-k>'
+    let g:UltiSnipsJumpForwardTrigger = '<C-k>'
+    let g:UltiSnipsJumpBackwardTrigger = '<C-j>'
+" }
+
+" YouCompleteMe {
+    Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+" }
+
+" Other {
     Plug 'junegunn/vim-easy-align'
     Plug 'junegunn/vim-github-dashboard'
     Plug 'tpope/vim-fugitive'
