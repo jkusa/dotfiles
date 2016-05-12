@@ -66,11 +66,13 @@ export LC_ALL=en_US.utf-8
 export LANG="$LC_ALL"
 export EDITOR=vim
 export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
+export TERM=xterm-256color
 
 #Aliases
-alias tmux="TERM=screen-256color-bce tmux attach"
+alias tmux="TERM=screen-256color-bce tmux -2 attach"
 alias t='[[ -z "$TMUX" ]] && exec tmux -2 attach'
 alias tg='tig --all'
+alias vim='nvim'
 
 #Allow more files to be open
 ulimit -S -n 4080
