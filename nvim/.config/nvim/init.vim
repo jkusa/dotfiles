@@ -47,6 +47,9 @@
     set cursorline                  " Highlight current line
     set noshowmode
     set laststatus=2
+    let g:airline_powerline_fonts = 1
+    set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline:14
+    set encoding=utf-8
 " }
 
 " Formatting {

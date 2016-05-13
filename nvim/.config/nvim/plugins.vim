@@ -33,7 +33,7 @@ call plug#begin('~/.vim/plugged')
 " }
 "
 " ctrlp {
-    Plug 'kien/ctrlp.vim'
+    Plug 'ctrlpvim/ctrlp.vim'
     let g:ctrlp_working_path_mode = 'ra'
     let g:ctrlp_custom_ignore = {
                 \ 'dir':  '\.git$\|\.hg$\|\.svn$',
@@ -79,12 +79,6 @@ call plug#begin('~/.vim/plugged')
     let g:neomake_list_height = 2
 " }
 
-" UI {
-    Plug 'powerline/fonts'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'junegunn/seoul256.vim'
-" }
 
 " Writing {
     Plug 'reedes/vim-litecorrect'
@@ -116,13 +110,16 @@ call plug#begin('~/.vim/plugged')
 
 " Utilsnips {
     Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-    let g:UltiSnipsExpandTrigger = '<C-k>'
-    let g:UltiSnipsJumpForwardTrigger = '<C-k>'
-    let g:UltiSnipsJumpBackwardTrigger = '<C-j>'
 " }
 
 " YouCompleteMe {
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+    Plug 'fisadev/vim-ctrlp-cmdpalette'
+" }
+
+" Startify {
+    Plug 'mhinz/vim-startify'
+    let g:startify_session_delete_buffers = 1
 " }
 
 " Other {
@@ -143,5 +140,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'mhinz/vim-signify'
 " }
 
+" UI {
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'junegunn/seoul256.vim'
+" }
+"
 call plug#end()
 

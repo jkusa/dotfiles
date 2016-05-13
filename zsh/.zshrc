@@ -64,7 +64,7 @@ bindkey -M viins '^e'    end-of-line
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/X11/bin:$HOME/dev/lib/play-2.2.0:$PATH
 export LC_ALL=en_US.utf-8 
 export LANG="$LC_ALL"
-export EDITOR=vim
+export EDITOR=`which nvim`
 export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 export TERM=xterm-256color
 
