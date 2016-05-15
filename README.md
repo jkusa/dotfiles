@@ -38,6 +38,10 @@
     - [git](http://git-scm.com/) - distributed version control system (install via Homebrew; stock Mac version has issues)
     - [autojump](https://github.com/joelthelion/autojump) - a cd command that learns
     - set zsh as default shell: `chsh -s /bin/zsh`
+ - neovim
+    - [vim-plug](https://github.com/junegunn/vim-plug) - minimalist vim plugin manager
+    - install python lib: `pip install neovim` 
+    - [custom terminal font](fonts/Meslo%20LG%20M%20Regular%20for%20Powerline%20Nerd%20Font%20Plus%20Font%20Awesome%20Plus%20Octicons%20Plus%20Pomicons.otf) - powerline font with nerd-font patch
  - vim
     - [jshint](https://github.com/jshint/jshint) - a tool that helps to detect errors and potential problems in your JavaScript code
     - [ctags](http://ctags.sourceforge.net/) - generates an index (or tag) file of language objects found in source files that allows these items to be quickly and easily located by a text editor or other utility
