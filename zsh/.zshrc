@@ -84,3 +84,5 @@ source $(brew --prefix nvm)/nvm.sh
 #Java Config
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
+# Fix python crash with vim and YCM plugin
+export DYLD_FORCE_FLAT_NAMESPACE=1
