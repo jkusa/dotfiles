@@ -3,7 +3,6 @@
 
     " Find merge conflict markers
     map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
-    noremap <Leader>t :noautocmd vimgrep /TODO/j **/*.js<CR>:cw<CR>
     map <Leader>p :CtrlPCmdPalette<CR>
 " }
 
