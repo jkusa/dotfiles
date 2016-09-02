@@ -10,6 +10,7 @@ set main-view = \
         commit-title:yes,graph,refs,overflow=no
 
 #Bindings
+bind generic + !git commit --amend
 bind main B !git rebase -i %(commit)
 bind main R !git reset --soft %(commit)
 bind main ! !git revert %(commit)
