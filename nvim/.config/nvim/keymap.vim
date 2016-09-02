@@ -4,6 +4,7 @@
     " Find merge conflict markers
     map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
     map <Leader>p :CtrlPCmdPalette<CR>
+    nnoremap <Leader>f :CtrlPFunky<Cr>
 " }
 
 " Typos {

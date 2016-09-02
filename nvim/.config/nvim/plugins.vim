@@ -35,6 +35,10 @@ call plug#begin('~/.vim/plugged')
 "
 " ctrlp {
     Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'tacahiroy/ctrlp-funky'
+    Plug 'fisadev/vim-ctrlp-cmdpalette'
+    let g:ctrlp_extensions = ['funky', 'cmdpalette']
+    let g:ctrlp_funky_syntax_highlight = 1
     let g:ctrlp_working_path_mode = 'ra'
     let g:ctrlp_custom_ignore = {
                 \ 'dir':  '\.git$\|\.hg$\|\.svn$',
@@ -115,7 +119,6 @@ call plug#begin('~/.vim/plugged')
 
 " YouCompleteMe {
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-    Plug 'fisadev/vim-ctrlp-cmdpalette'
 " }
 
 " Startify {
