@@ -62,7 +62,7 @@ bindkey -M viins '^e'    end-of-line
 
 #Exports
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/X11/bin:$HOME/dev/lib/play-2.2.0:$PATH
-export LC_ALL=en_US.utf-8 
+export LC_ALL=en_US.utf-8
 export LANG="$LC_ALL"
 export EDITOR=`which nvim`
 export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
@@ -73,6 +73,7 @@ alias tmux="TERM=screen-256color-bce tmux -2 attach"
 alias t='[[ -z "$TMUX" ]] && exec tmux -2 attach'
 alias tg='tig --all'
 alias vim='nvim'
+alias ack='ack --pager="less -FRSX"'
 
 #Allow more files to be open
 ulimit -S -n 4080
