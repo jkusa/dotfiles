@@ -50,8 +50,6 @@ plugins=(git history-substring-search vi-mode history autojump)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-
 # Key maps
 bindkey '^R' history-incremental-search-backward 
 bindkey -M vicmd '?' history-incremental-search-backward
@@ -85,9 +83,15 @@ export NVM_DIR=~/.nvm
 
 #Java Config
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
+#Ruby Config
+[ -f /usr/local/bin/rbenv ] && eval "$(rbenv init -)"
+
+#Swift Config
+export SWIFTENV_ROOT="$HOME/.swiftenv"
+export PATH="$SWIFTENV_ROOT/bin:$PATH"
+[ -f /usr/local/bin/swiftenv ] && eval "$(swiftenv init -)"
 
 # Fix python crash with vim and YCM plugin
 export DYLD_FORCE_FLAT_NAMESPACE=1
-
-#ruby
-[ -f /usr/local/bin/rbenv ] && eval "$(rbenv init -)"
