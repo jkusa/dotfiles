@@ -20,3 +20,4 @@ bind stash A !?git stash apply %(stash)
 bind status S !?git stash save --keep-index %
 bind status P !git push origin
 bind generic B @sh -c "xdg-open 'https://'$(git remote -v | grep -Eo 'github.com[:/][^.]+' | head -1 | tr : /)'/commit/%(commit)'"
+bind status D !git difftool %(commit) %(file)
