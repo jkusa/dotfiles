@@ -74,6 +74,7 @@ alias ta='[[ -z "$TMUX" ]] && exec tmux -2 attach'
 alias tg='tig --all'
 alias vim='nvim'
 alias ack='ack --pager="less -FRSX"'
+alias t="$HOME/git/todo.txt-cli/todo.sh -a"
 
 #Allow more files to be open
 ulimit -S -n 4080
