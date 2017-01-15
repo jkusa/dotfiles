@@ -81,7 +81,7 @@ ulimit -S -n 4080
 
 #Node Config
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+[ -f $(brew --prefix nvm)/nvm.sh ] && source $(brew --prefix nvm)/nvm.sh
 
 #Java Config
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
