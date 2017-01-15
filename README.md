@@ -51,6 +51,10 @@
 # langs
  - node.js
       - [nvm](https://github.com/creationix/nvm) - Node Version Manager (`brew install nvm`) 
+ - swift
+      - [swiftenv](https://github.com/kylef/swiftenv) - Swift Version Manager (`brew install swiftenv`)
+ - ruby
+      - [rbenv](https://github.com/rbenv/rbenv) - Groom your app’s Ruby environment (`brew install rbenv`)
  - java
       - [jvm](http://www.oracle.com/technetwork/java/javase/downloads/index.html) - a general-purpose computer programming language
       - [intellij](https://www.jetbrains.com/idea/) - the most intelligent java ide (with vim plugin)
