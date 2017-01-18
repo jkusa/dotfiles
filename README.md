@@ -34,6 +34,7 @@
     - [gnu stow](http://www.gnu.org/software/stow/) - a symlink farm manager
     - [tig](https://github.com/jonas/tig) - a text-mode interface for git
     - [seoul256](https://github.com/junegunn/seoul256.vim/blob/master/terminal-app/seoul256.terminal) - a terminal.app scheme
+    - [todo.txt-cli](https://github.com/ginatrapani/todo.txt-cli) - a simple and extensible shell script for managing your todo.txt file
  - zsh
     - [git](http://git-scm.com/) - distributed version control system (install via Homebrew; stock Mac version has issues)
     - [autojump](https://github.com/joelthelion/autojump) - a cd command that learns
