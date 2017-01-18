@@ -73,6 +73,10 @@ alias tg='tig --all'
 alias vim='nvim'
 alias ack='ack --pager="less -FRSX"'
 alias t="$HOME/git/todo.txt-cli/todo.sh -a"
+alias tw="$HOME/git/todo.txt-cli/todo.sh -@ list @work"
+alias th="$HOME/git/todo.txt-cli/todo.sh -@ list @home"
+alias twa="$HOME/git/todo.txt-cli/todo.sh -@ add @work"
+alias tha="$HOME/git/todo.txt-cli/todo.sh -@ add @home"
 
 #Allow more files to be open
 ulimit -S -n 4080
