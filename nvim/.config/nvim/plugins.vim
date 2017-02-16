@@ -127,6 +127,16 @@ call plug#begin('~/.vim/plugged')
     let g:startify_session_delete_buffers = 1
 " }
 
+" Productivity {
+    Plug 'freitass/todo.txt-vim'
+    autocmd filetype taskpaper let g:auto_save = 1
+    autocmd filetype taskpaper :WatchForChanges!
+
+    Plug 'djoshea/vim-autoread'
+    autocmd filetype todo let g:auto_save = 1
+    autocmd filetype todo :WatchForChanges!
+" }
+
 " Other {
     Plug 'junegunn/vim-easy-align'
     Plug 'junegunn/vim-github-dashboard'
@@ -143,6 +153,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'gorodinskiy/vim-coloresque'
     Plug 'scrooloose/nerdcommenter'
     Plug 'mhinz/vim-signify'
+    Plug 'davidoc/taskpaper.vim'
+    Plug 'vim-scripts/vim-auto-save' 
 " }
 
 " UI {
