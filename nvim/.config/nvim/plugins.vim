@@ -32,8 +32,11 @@ call plug#begin('~/.vim/plugged')
       let g:ackprg = 'ag --vimgrep'
     endif
     let g:ackhighlight = 1
+
+    cnoreabbrev Ack Ack!
+    cnoreabbrev Find Ack!
 " }
-"
+
 " ctrlp {
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'tacahiroy/ctrlp-funky'
@@ -84,7 +87,6 @@ call plug#begin('~/.vim/plugged')
     let g:neomake_open_list = 2
     let g:neomake_list_height = 2
 " }
-
 
 " Writing {
     Plug 'reedes/vim-litecorrect'
