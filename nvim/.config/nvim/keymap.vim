@@ -3,8 +3,6 @@
 
     " Find merge conflict markers
     map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
-    map <Leader>p :CtrlPCmdPalette<CR>
-    nnoremap <Leader>f :CtrlPFunky<Cr>
 " }
 
 " Typos {
@@ -17,6 +15,16 @@
     command! -bang Q q<bang>
     command! -bang QA qa<bang>
     command! -bang Qa qa<bang>
+" }
+
+" Ack {
+    nnoremap <leader>f :Ack!<Space>
+    nnoremap <leader>r :Replace<Space>
+" }
+
+" CtrlP {
+    map <Leader>p :CtrlPCmdPalette<CR>
+    nnoremap <Leader>fu :CtrlPFunky<Cr>
 " }
 
 " UtilSnips {
