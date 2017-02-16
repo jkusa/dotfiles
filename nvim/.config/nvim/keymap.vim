@@ -1,5 +1,5 @@
 " General {
-    let mapleader = ','
+    let mapleader = "\<Space>"
 
     " Find merge conflict markers
     map <leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
