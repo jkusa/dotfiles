@@ -153,7 +153,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'luochen1990/rainbow'
     Plug 'amirh/HTML-AutoCloseTag'
     Plug 'gorodinskiy/vim-coloresque'
-    Plug 'scrooloose/nerdcommenter'
+    Plug 'tomtom/tcomment_vim'
     Plug 'mhinz/vim-signify'
     Plug 'davidoc/taskpaper.vim'
     Plug 'vim-scripts/vim-auto-save' 
