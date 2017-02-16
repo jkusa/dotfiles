@@ -26,3 +26,11 @@
       return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
     endfunction
 " }
+"
+function! Replace(search, replace, directory)
+    let cmd = 'ack -l ' . a:search . ' ' . a:directory
+    let files = substitute(system(cmd), '\n', ' ', 'g')
+    execute 'args ' . files
+    execute 'argdo %s/' . a:search  . '/' . a:replace . '/gc'
+endfunction
+command! -nargs=* -complete=dir Replace call Replace(<f-args>)
