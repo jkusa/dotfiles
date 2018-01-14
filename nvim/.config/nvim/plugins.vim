@@ -71,7 +71,7 @@ call plug#begin('~/.vim/plugged')
 
 " Neomake {
     Plug 'benekastah/neomake'
-    let g:neomake_javascript_enabled_makers = ['jshint']
+    let g:neomake_javascript_enabled_makers = ['eslint']
     "autocmd InsertChange,TextChanged * update | Neomake
     autocmd! BufWritePost * Neomake
 
