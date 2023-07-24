@@ -59,11 +59,10 @@ bindkey -M viins '^a'    beginning-of-line
 bindkey -M viins '^e'    end-of-line
 
 #Exports
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/X11/bin:$HOME/dev/lib/play-2.2.0:$PATH
+export PATH=~/.local/bin:$PATH
 export LC_ALL=en_US.utf-8
 export LANG="$LC_ALL"
 export EDITOR=`which nvim`
-export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 export TERM=xterm-256color
 
 #Aliases
@@ -72,21 +71,20 @@ alias ta='[[ -z "$TMUX" ]] && exec tmux -2 attach'
 alias tg='tig --all'
 alias vim='nvim'
 alias ack='ack --pager="less -FRSX"'
-alias t="$HOME/git/todo.txt-cli/todo.sh -a"
-alias tw="$HOME/git/todo.txt-cli/todo.sh -@ list @work"
-alias th="$HOME/git/todo.txt-cli/todo.sh -@ list @home"
-alias twa="$HOME/git/todo.txt-cli/todo.sh -@ add @work"
-alias tha="$HOME/git/todo.txt-cli/todo.sh -@ add @home"
 
 #Allow more files to be open
 ulimit -S -n 4080
 
 #Node Config
-export NVM_DIR=~/.nvm
-[ -f $(brew --prefix nvm)/nvm.sh ] && source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+#source "$HOME/code/emsdk/emsdk_env.sh"
 
 #Java Config
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+[ -f /usr/libexec/java_home ] && export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
 #Ruby Config
@@ -97,5 +95,12 @@ export SWIFTENV_ROOT="$HOME/.swiftenv"
 export PATH="$SWIFTENV_ROOT/bin:$PATH"
 [ -f /usr/local/bin/swiftenv ] && eval "$(swiftenv init -)"
 
-# Fix python crash with vim and YCM plugin
-export DYLD_FORCE_FLAT_NAMESPACE=1
+#Python Config
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+#Rust Config
+[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env

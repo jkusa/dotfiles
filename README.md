@@ -42,6 +42,7 @@
  - neovim
     - [vim-plug](https://github.com/junegunn/vim-plug) - minimalist vim plugin manager
     - install python lib: `pip install neovim` 
+    - `git config --global core.editor nvim`
     - [custom terminal font](fonts/Meslo%20LG%20M%20Regular%20for%20Powerline%20Nerd%20Font%20Plus%20Font%20Awesome%20Plus%20Octicons%20Plus%20Pomicons.otf) - powerline font with nerd-font patch
  - vim
     - [jshint](https://github.com/jshint/jshint) - a tool that helps to detect errors and potential problems in your JavaScript code
@@ -51,7 +52,7 @@
 
 # langs
  - node.js
-      - [nvm](https://github.com/creationix/nvm) - Node Version Manager (`brew install nvm`) 
+      - [nvm](https://github.com/creationix/nvm) - Node Version Manager 
  - swift
       - [swiftenv](https://github.com/kylef/swiftenv) - Swift Version Manager (`brew install swiftenv`)
  - ruby

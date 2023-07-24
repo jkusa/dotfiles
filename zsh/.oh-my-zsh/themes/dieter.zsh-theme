@@ -6,7 +6,7 @@
 # The exit code visual cues will only display once.
 # (i.e. they will be reset, even if you hit enter a few times on empty command prompts)
 
-typeset -A host_repr
+typeset -g -A host_repr
 
 # translate hostnames into shortened, colorcoded strings
 host_repr=('dieter-ws-a7n8x-arch' "%{$fg_bold[green]%}ws" 'dieter-p4sci-arch' "%{$fg_bold[blue]%}p4")
@@ -21,7 +21,7 @@ local user="%(!.%{$fg[blue]%}.%{$fg[blue]%})%n%{$reset_color%}"
 
 # Hostname part.  compressed and colorcoded per host_repr array
 # if not found, regular hostname in default color
-local host="@${host_repr[$(hostname)]:-$(hostname)}%{$reset_color%}"
+local host="@${host_repr[$HOST]:-$HOST}%{$reset_color%}"
 
 # Compacted $PWD
 local pwd="%{$fg[blue]%}%c%{$reset_color%}"

@@ -21,13 +21,13 @@
 
 rack_root(){
   setopt chaselinks
-  local orgdir="$(pwd)"
-  local basedir="$(pwd)"
+  local orgdir="$PWD"
+  local basedir="$PWD"
 
   while [[ $basedir != '/' ]]; do
     test -e "$basedir/config.ru" && break
     builtin cd ".." 2>/dev/null
-    basedir="$(pwd)"
+    basedir="$PWD"
   done
 
   builtin cd "$orgdir" 2>/dev/null
@@ -56,7 +56,7 @@ kapow(){
 compctl -W ~/.pow -/ kapow
 
 powit(){
-  local basedir="$(pwd)"
+  local basedir="$PWD"
   local vhost=$1
   [ ! -n "$vhost" ] && vhost=$(rack_root_detect)
   if [ ! -h ~/.pow/$vhost ]
@@ -73,7 +73,7 @@ powed(){
 }
 
 # Restart pow process
-# taken from http://www.matthewratzloff.com/blog/2011/12/23/restarting-pow-when-dns-stops-responding
+# taken from https://www.matthewratzloff.com
 repow(){
   lsof | grep 20560 | awk '{print $2}' | xargs kill -9
   launchctl unload ~/Library/LaunchAgents/cx.pow.powd.plist

@@ -1,6 +1,6 @@
-_load_z() {
-  source $1/z.sh
-}
+# Handle $0 according to the standard:
+# https://zdharma-continuum.github.io/Zsh-100-Commits-Club/Zsh-Plugin-Standard.html
+0="${${ZERO:-${0:#$ZSH_ARGZERO}}:-${(%):-%N}}"
+0="${${(M)0:#/*}:-$PWD/$0}"
 
-[[ -f $ZSH_CUSTOM/plugins/z/z.plugin.zsh ]] && _load_z $ZSH_CUSTOM/plugins/z
-[[ -f $ZSH/plugins/z/z.plugin.zsh ]] && _load_z $ZSH/plugins/z
+source "${0:h}/z.sh"

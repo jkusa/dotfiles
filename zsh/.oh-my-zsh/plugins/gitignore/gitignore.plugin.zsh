@@ -1,12 +1,12 @@
-function gi() { curl http://www.gitignore.io/api/$@ ;}
+function gi() { curl -fLw '\n' https://www.gitignore.io/api/"${(j:,:)@}" }
 
-_gitignireio_get_command_list() {
-  curl -s http://www.gitignore.io/api/list | tr "," "\n"
+_gitignoreio_get_command_list() {
+  curl -sfL https://www.gitignore.io/api/list | tr "," "\n"
 }
 
-_gitignireio () {
+_gitignoreio () {
   compset -P '*,'
-  compadd -S '' `_gitignireio_get_command_list`
+  compadd -S '' `_gitignoreio_get_command_list`
 }
 
-compdef _gitignireio gi
+compdef _gitignoreio gi

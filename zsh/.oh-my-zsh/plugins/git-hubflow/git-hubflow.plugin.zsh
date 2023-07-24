@@ -1,24 +1,9 @@
-#!zsh
-#
-# Installation
-# ------------
-#
-# To achieve git-hubflow completion nirvana:
-#
-#  0. Update your zsh's git-completion module to the newest verion.
-#     From here. http://zsh.git.sourceforge.net/git/gitweb.cgi?p=zsh/zsh;a=blob_plain;f=Completion/Unix/Command/_git;hb=HEAD
-#
-#  1. Install this file. Either:
-#
-#     a. Place it in your .zshrc:
-#
-#     b. Or, copy it somewhere (e.g. ~/.git-hubflow-completion.zsh) and put the following line in
-#        your .zshrc:
-#
-#            source ~/.git-hubflow-completion.zsh
-#
-#     c. Or, use this file as a oh-my-zsh plugin.
-#
+alias ghf='git hf'
+alias ghff='git hf feature'
+alias ghfr='git hf release'
+alias ghfh='git hf hotfix'
+alias ghfs='git hf support'
+alias ghfu='git hf update'
 
 _git-hf ()
 {
@@ -90,8 +75,8 @@ __git-hf-release ()
                 'finish:Finish a release branch.'
                 'list:List all your release branches. (Alias to `git hf release`)'
                 'cancel:Cancel release'
-                'push:Push release to github'
-                'pull:Pull release from github'
+                'push:Push release to GitHub'
+                'pull:Pull release from GitHub'
                 'track:Track release'
             )
             _describe -t commands 'git hf release' subcommands
@@ -148,8 +133,8 @@ __git-hf-hotfix ()
                 'list:List all your hotfix branches. (Alias to `git hf hotfix`)'
                 'publish:Publish the hotfix branch.'
                 'track:Track the hotfix branch.'
-                'pull:Pull the hotfix from github.'
-                'push:Push the hotfix to github.'
+                'pull:Pull the hotfix from GitHub.'
+                'push:Push the hotfix to GitHub.'
                 'cancel:Cancel the hotfix.'
             )
             _describe -t commands 'git hf hotfix' subcommands
@@ -210,8 +195,8 @@ __git-hf-feature ()
                 'diff:Diff'
                 'rebase:Rebase feature branch against develop'
                 'checkout:Checkout feature'
-                'pull:Pull feature branch from github'
-                'push:Push feature branch to github'
+                'pull:Pull feature branch from GitHub'
+                'push:Push feature branch to GitHub'
                 'cancel:Cancel feature'
             )
             _describe -t commands 'git hf feature' subcommands
