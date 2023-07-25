@@ -87,7 +87,10 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 #source "$HOME/code/emsdk/emsdk_env.sh"
 
 #Java Config
-[ -f /usr/libexec/java_home ] && export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+/usr/libexec/java_home 1>/dev/null 2>&1
+if [ $? -eq 0 ]; then
+ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+fi
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
 #Ruby Config
