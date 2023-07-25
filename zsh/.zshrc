@@ -75,6 +75,9 @@ alias ack='ack --pager="less -FRSX"'
 #Allow more files to be open
 ulimit -S -n 4080
 
+#Brew Config
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 #Node Config
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
