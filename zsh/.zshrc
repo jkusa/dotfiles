@@ -76,7 +76,7 @@ alias ack='ack --pager="less -FRSX"'
 ulimit -S -n 4080
 
 #Brew Config
-eval "$(/opt/homebrew/bin/brew shellenv)"
+[ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 #Node Config
 export NVM_DIR="$HOME/.nvm"
