@@ -1,6 +1,5 @@
+.DS_Store
 spf13-vim-3/.git/
 spf13-vim-3/.gitignore
 spf13-vim-3/.vim/bundle
-oh-my-zsh/.gitignore
-oh-my-zsh/.git/
 nvim/.config/nvim/undodir
