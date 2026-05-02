@@ -1,4 +1,5 @@
 .DS_Store
+zsh/.zshrc.local
 nvim/.config/nvim/undodir
 nvim/.config/nvim/autoload/neomake/
 nvim/.config/configstore/
