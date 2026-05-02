@@ -109,3 +109,13 @@ fi
 
 #Rust Config
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
+
+#Docker
+[ -d "/Applications/Docker.app/Contents/Resources/bin" ] && export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+
+#Deno
+[ -f "$HOME/.deno/env" ] && . "$HOME/.deno/env"
+if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then export FPATH="$HOME/.zsh/completions:$FPATH"; fi
+
+# Local machine overrides
+[ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
