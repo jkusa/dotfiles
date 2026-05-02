@@ -84,7 +84,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
-#source "$HOME/code/emsdk/emsdk_env.sh"
 
 #Java Config
 /usr/libexec/java_home 1>/dev/null 2>&1
