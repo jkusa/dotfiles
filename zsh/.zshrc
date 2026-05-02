@@ -80,8 +80,18 @@ ulimit -S -n 4080
 
 #Node Config
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+  _load_nvm() {
+    unset -f nvm node npm npx yarn
+    \. "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+  }
+  nvm() { _load_nvm; nvm "$@"; }
+  node() { _load_nvm; node "$@"; }
+  npm() { _load_nvm; npm "$@"; }
+  npx() { _load_nvm; npx "$@"; }
+  yarn() { _load_nvm; yarn "$@"; }
+fi
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
@@ -90,15 +100,19 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 if [ $? -eq 0 ]; then
  export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 fi
-export ANDROID_HOME=/usr/local/opt/android-sdk
+if [ -d "/opt/homebrew/opt/android-sdk" ]; then
+  export ANDROID_HOME="/opt/homebrew/opt/android-sdk"
+elif [ -d "/usr/local/opt/android-sdk" ]; then
+  export ANDROID_HOME="/usr/local/opt/android-sdk"
+fi
 
 #Ruby Config
-[ -f /usr/local/bin/rbenv ] && eval "$(rbenv init -)"
+command -v rbenv 1>/dev/null 2>&1 && eval "$(rbenv init -)"
 
 #Swift Config
 export SWIFTENV_ROOT="$HOME/.swiftenv"
 export PATH="$SWIFTENV_ROOT/bin:$PATH"
-[ -f /usr/local/bin/swiftenv ] && eval "$(swiftenv init -)"
+command -v swiftenv 1>/dev/null 2>&1 && eval "$(swiftenv init -)"
 
 #Python Config
 export PYENV_ROOT="$HOME/.pyenv"
