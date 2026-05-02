@@ -1,5 +1,8 @@
 .DS_Store
-spf13-vim-3/.git/
-spf13-vim-3/.gitignore
-spf13-vim-3/.vim/bundle
 nvim/.config/nvim/undodir
+nvim/.config/nvim/autoload/neomake/
+nvim/.config/configstore/
+nvim/.config/gh/
+nvim/.config/git/
+nvim/.config/uv/
+nvim/.config/yarn/
