@@ -1,4 +1,9 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(~/.claude/skills/sp-task/scripts/sp:*)"
+    ]
+  },
   "statusLine": {
     "type": "command",
     "command": "npx -y @owloops/claude-powerline@latest --style=powerline"
@@ -22,5 +27,9 @@
       }
     }
   },
-  "editorMode": "vim"
+  "tui": "fullscreen",
+  "editorMode": "vim",
+  "autoCompactEnabled": true,
+  "agentPushNotifEnabled": true,
+  "hooks": {"SessionStart":[{"matcher":"*","hooks":[{"type":"command","command":"bash '/Users/jkusa/.claude/hooks/herdr-agent-state.sh' session","timeout":10}]}]}
 }
