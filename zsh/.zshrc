@@ -66,8 +66,7 @@ export EDITOR=`which nvim`
 export TERM=xterm-256color
 
 #Aliases
-alias tmux='TERM=screen-256color-bce tmux -2'
-alias ta='[[ -z "$TMUX" ]] && exec tmux -2 attach'
+alias ta='[[ -z "$TMUX" ]] && exec tmux attach'
 alias tg='tig --all'
 alias vim='nvim'
 alias ack='ack --pager="less -FRSX"'
