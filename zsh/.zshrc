@@ -130,5 +130,13 @@ fi
 [ -f "$HOME/.deno/env" ] && . "$HOME/.deno/env"
 if [[ ":$FPATH:" != *":$HOME/.zsh/completions:"* ]]; then export FPATH="$HOME/.zsh/completions:$FPATH"; fi
 
+#Bun Config
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+#Go Config
+[ -d "/usr/local/go/bin" ] && export PATH="$PATH:/usr/local/go/bin"
+
 # Local machine overrides
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
