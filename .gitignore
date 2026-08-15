@@ -1,2 +1,9 @@
 .DS_Store
 zsh/.zshrc.local
+nvim/.config/nvim/*
+!nvim/.config/nvim/init.vim
+!nvim/.config/nvim/functions.vim
+!nvim/.config/nvim/keymap.vim
+!nvim/.config/nvim/plugins.vim
+!nvim/.config/nvim/autoload
+!nvim/.config/nvim/autoload/plug.vim
