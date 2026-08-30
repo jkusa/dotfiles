@@ -1,9 +1,12 @@
 .DS_Store
 zsh/.zshrc.local
+# ~/.config is stowed from this package, so every tool's runtime state and
+# credentials land here. Ignore everything, allowlist what we actually track.
+nvim/.config/*
+!nvim/.config/nvim/
 nvim/.config/nvim/*
 !nvim/.config/nvim/init.vim
 !nvim/.config/nvim/functions.vim
 !nvim/.config/nvim/keymap.vim
 !nvim/.config/nvim/plugins.vim
-!nvim/.config/nvim/autoload
-!nvim/.config/nvim/autoload/plug.vim
+!nvim/.config/nvim/autoload/
